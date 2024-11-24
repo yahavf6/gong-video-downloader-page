@@ -6,8 +6,8 @@
     <title>Gong.io Video Downloader - Chrome Extension</title>
     <style>
         :root {
-            --primary-color: #4a90e2;
-            --secondary-color: #2c3e50;
+            --primary-color: #9333ea;
+            --secondary-color: #6b21a8;
         }
         
         body {
@@ -39,29 +39,56 @@
         }
 
         .feature-card {
-            background: #f8f9fa;
+            background: #faf5ff;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 2px solid #e9d5ff;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
         }
 
         .cta-button {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: var(--primary-color);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
         .cta-button:hover {
-            background: #357abd;
+            background: #7e22ce;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+
+        .chrome-logo {
+            width: 24px;
+            height: 24px;
         }
 
         .installation {
-            background: #f8f9fa;
+            background: #faf5ff;
             padding: 2rem;
             border-radius: 8px;
             margin: 3rem 0;
@@ -88,14 +115,48 @@
             height: auto;
             margin-bottom: 1rem;
         }
+
+        .qa-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .qa-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .usage-guide, .faq, .privacy-policy, .troubleshooting {
+            background: #faf5ff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 2px solid #e9d5ff;
+            transition: border-color 0.3s ease;
+        }
+
+        .usage-guide:hover, .faq:hover, .privacy-policy:hover, 
+        .troubleshooting:hover {
+            border-color: var(--primary-color);
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Gong.io Video Downloader Logo" class="logo">
+        <img src="https://raw.githubusercontent.com/yahavf6/gong-video-downloader-page/refs/heads/main/logo_128px.png" alt="Gong.io Video Downloader Logo" class="logo">
         <h1>Gong.io Video Downloader</h1>
         <p>Download Gong.io videos for offline access and better collaboration</p>
-        <a href="https://chrome.google.com/webstore" class="cta-button">Add to Chrome</a>
+        <a href="https://chromewebstore.google.com/detail/kfngoponeggjbnfcncbiedkpbjnadcin" class="cta-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png?20151104231050" alt="Chrome" class="chrome-logo">
+            Add to Chrome - It's Free
+        </a>
     </header>
 
     <main class="container">
@@ -124,6 +185,55 @@
             </ol>
         </section>
 
+        <section class="usage-guide">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Navigate to any Gong.io video page in your browser</li>
+                <li>Wait for the video to fully load</li>
+                <li>Click the purple Gong Video Downloader icon in your Chrome toolbar</li>
+                <li>Select your preferred video quality (if available)</li>
+                <li>The video will automatically start downloading to your default downloads folder</li>
+            </ol>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="qa-item">
+                <h3>Is this extension safe to use?</h3>
+                <p>Yes, our extension is completely safe. It only requests necessary permissions to function and doesn't collect any personal data.</p>
+            </div>
+            <div class="qa-item">
+                <h3>Will it work with all Gong.io videos?</h3>
+                <p>The extension works with standard Gong.io video pages. Some videos might be protected by additional security measures that prevent downloading.</p>
+            </div>
+            <div class="qa-item">
+                <h3>What video format will I get?</h3>
+                <p>Videos are downloaded in MP4 format, which is widely compatible with most video players.</p>
+            </div>
+        </section>
+
+        <section class="privacy-policy">
+            <h2>Privacy Policy</h2>
+            <p>We take your privacy seriously. The Gong.io Video Downloader:</p>
+            <ul>
+                <li>Does not collect any personal information</li>
+                <li>Does not track your browsing history</li>
+                <li>Only activates on Gong.io video pages</li>
+                <li>Requires minimal permissions to function</li>
+                <li>Does not store or transmit any user data</li>
+            </ul>
+        </section>
+
+        <section class="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><strong>Extension not working?</strong> Make sure you're on a valid Gong.io video page and try refreshing.</li>
+                <li><strong>Download not starting?</strong> Check if your browser's download settings are blocking the download.</li>
+                <li><strong>Video quality issues?</strong> The download quality matches the playback quality of the original video.</li>
+                <li><strong>Other issues?</strong> Contact our support team via email for assistance.</li>
+            </ul>
+        </section>
+
         <section>
             <h2>About</h2>
             <p>The Gong.io Video Downloader extension is designed with simplicity and efficiency in mind. It serves a single purpose: allowing users to download videos from Gong.io directly to their devices for offline access and improved collaboration. The extension maintains a lightweight footprint while delivering reliable functionality.</p>
@@ -131,7 +241,7 @@
     </main>
 
     <footer>
-        <p>© 2024 Gong.io Video Downloader | <a href="https://github.com/yourusername" style="color: white;">GitHub</a></p>
+        <p>© 2024 Gong.io Video Downloader | <a href="mailto:gongvideodownloader@gmail.com" style="color: white;">Contact Us</a></p>
     </footer>
 </body>
 </html>
