@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gong.io Video Downloader - Chrome Extension</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #357abd;
+        }
+
+        .installation {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--secondary-color);
+        }
+
+        header h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gong.io Video Downloader</h1>
+        <p>Download Gong.io videos for offline access and better collaboration</p>
+        <a href="https://chrome.google.com/webstore" class="cta-button">Add to Chrome</a>
+    </header>
+
+    <main class="container">
+        <section class="features">
+            <div class="feature-card">
+                <h3>🎯 Single Purpose</h3>
+                <p>Focused solely on downloading Gong.io videos efficiently and reliably.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Lightweight</h3>
+                <p>Minimal impact on browser performance while maintaining full functionality.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Offline Access</h3>
+                <p>Access your important Gong.io videos anytime, even without internet connection.</p>
+            </div>
+        </section>
+
+        <section class="installation">
+            <h2>Installation Guide</h2>
+            <ol>
+                <li>Click the "Add to Chrome" button above</li>
+                <li>Click "Add Extension" in the Chrome Web Store prompt</li>
+                <li>Once installed, visit any Gong.io video page</li>
+                <li>Click the extension icon to download the video</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>About</h2>
+            <p>The Gong.io Video Downloader extension is designed with simplicity and efficiency in mind. It serves a single purpose: allowing users to download videos from Gong.io directly to their devices for offline access and improved collaboration. The extension maintains a lightweight footprint while delivering reliable functionality.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Gong.io Video Downloader | <a href="https://github.com/yourusername" style="color: white;">GitHub</a></p>
+    </footer>
+</body>
+</html>
