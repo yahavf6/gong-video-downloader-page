@@ -147,6 +147,27 @@
         li {
             margin-bottom: 0.5rem;
         }
+
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .coffee-button {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -154,10 +175,19 @@
         <img src="https://raw.githubusercontent.com/yahavf6/gong-video-downloader-page/refs/heads/main/logo_128px.png" alt="Gong.io Video Downloader Logo" class="logo">
         <h1>Gong.io Video Downloader</h1>
         <p>Download Gong.io videos for offline access and better collaboration</p>
-        <a href="https://chromewebstore.google.com/detail/kfngoponeggjbnfcncbiedkpbjnadcin" class="cta-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png?20151104231050" alt="Chrome" class="chrome-logo">
-            Add to Chrome - It's Free
-        </a>
+        <div class="button-container">
+            <a href="https://chromewebstore.google.com/detail/kfngoponeggjbnfcncbiedkpbjnadcin" class="cta-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png?20151104231050" alt="Chrome" class="chrome-logo">
+                Add to Chrome - It's Free
+            </a>
+            <a href="https://www.buymeacoffee.com/yahavf6" target="_blank" class="coffee-button">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                     alt="Buy Me A Coffee" 
+                     style="height: 60px !important;width: 217px !important;border-radius: 5px;transition: transform 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-2px)'" 
+                     onmouseout="this.style.transform='translateY(0)'">
+            </a>
+        </div>
     </header>
 
     <main class="container">
@@ -243,6 +273,15 @@
 
     <footer>
         <p>© 2024 Gong.io Video Downloader | <a href="mailto:gongvideodownloader@gmail.com" style="color: white;">Contact Us</a></p>
+        <div style="margin-top: 1rem;">
+            <a href="https://www.buymeacoffee.com/yahavf6" target="_blank">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                     alt="Buy Me A Coffee" 
+                     style="height: 60px !important;width: 217px !important;border-radius: 5px;transition: transform 0.3s ease;"
+                     onmouseover="this.style.transform='translateY(-2px)'" 
+                     onmouseout="this.style.transform='translateY(0)'">
+            </a>
+        </div>
     </footer>
 </body>
 </html>
